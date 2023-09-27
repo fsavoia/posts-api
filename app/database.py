@@ -2,7 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-
 SQLALCHEMY_ENDPOINT = "postgresql://admin:123qwe@db/fastapi"
 
 engine = create_engine(SQLALCHEMY_ENDPOINT)

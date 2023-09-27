@@ -6,7 +6,7 @@ from database import get_db
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-router = APIRouter(prefix="/posts", tags=["Users"])
+router = APIRouter(prefix="/posts", tags=["Posts"])
 
 
 @router.get("/", response_model=List[schemas.PostResponse])
@@ -16,7 +16,9 @@ def get_posts(db: Session = Depends(get_db)):
 
 
 @router.post(
-    "/", status_code=status.HTTP_201_CREATED, response_model=schemas.PostResponse
+    "/",
+    status_code=status.HTTP_201_CREATED,
+    response_model=schemas.PostResponse,
 )
 def create_posts(post: schemas.PostCreate, db: Session = Depends(get_db)):
     data = models.Post(**post.dict())
@@ -55,7 +57,9 @@ def delete_post(id: int, db: Session = Depends(get_db)):
 
 
 @router.put("/{id}", response_model=schemas.PostResponse)
-def update_post(id: int, post: schemas.PostCreate, db: Session = Depends(get_db)):
+def update_post(
+    id: int, post: schemas.PostCreate, db: Session = Depends(get_db)
+):
     data = db.query(models.Post).filter(models.Post.id == id)
 
     if data.first() is None:
