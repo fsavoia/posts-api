@@ -1,6 +1,7 @@
 from typing import List
 
 import models
+import oauth2
 import schemas
 from database import get_db
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -20,7 +21,12 @@ def get_posts(db: Session = Depends(get_db)):
     status_code=status.HTTP_201_CREATED,
     response_model=schemas.PostResponse,
 )
-def create_posts(post: schemas.PostCreate, db: Session = Depends(get_db)):
+def create_posts(
+    post: schemas.PostCreate,
+    db: Session = Depends(get_db),
+    user_id: int = Depends(oauth2.get_current_user),
+):
+    print(user_id)
     data = models.Post(**post.dict())
     db.add(data)
     db.commit()
