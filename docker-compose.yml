@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Use the Dockerfile for the 'web' service
+    container_name: fastapi_app
+    networks:
+      - blogapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+
+  db:
+    image: postgres:latest
+    networks:
+      - blogapi
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123qwe
+      POSTGRES_DB: fastapi
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+networks:
+  blogapi:
+
+volumes:
+  postgres_data:
