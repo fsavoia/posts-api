@@ -1,4 +1,5 @@
 import models
+import oauth2
 import schemas
 import utils
 from database import get_db
@@ -29,6 +30,7 @@ def login(user_credentials: schemas.UserLogin, db: Session = Depends(get_db)):
         )
 
     # create a token
-    # return token
+    access_token = oauth2.create_access_token(data={"user_id": user.id})
 
-    return {"token": "example token"}
+    # returning a token
+    return {"access_token": access_token, "token_type": "bearer"}
