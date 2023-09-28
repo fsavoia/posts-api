@@ -34,6 +34,3 @@ def root():
     Root endpoint to check if the API is running.
     """
     return {"message": "Welcome to Blog API"}
-
-
-# TODO: adding docstring's to the entire code
