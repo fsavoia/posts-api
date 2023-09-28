@@ -2,7 +2,6 @@ from typing import List
 
 import models
 import schemas
-import utils
 from database import get_db
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -11,8 +10,14 @@ router = APIRouter(prefix="/users", tags=["Users"])
 
 
 @router.get("/", response_model=List[schemas.UserResponse])
-def get_users(db: Session = Depends(get_db)):
+def get_users(db: Session = Depends(get_db)) -> list:
+    """Get the list of all active users
+
+    Returns:
+    list: Returns a list converted to Json by FastAPI
+    """
     data = db.query(models.User).all()
+    print(f"type: {type(data)}")
 
     return data
 
