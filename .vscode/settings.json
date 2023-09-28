@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "autoflush",
+        "fastapi",
+        "sessionmaker",
+        "sqlalchemy",
+        "SQLALCHEMY",
+        "Savoia",
+        "sqltypes",
+        "passlib",
+        "ASGI",
+        "uvicorn",
+        "pydantic"
+    ]
+}
