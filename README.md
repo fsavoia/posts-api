@@ -51,7 +51,7 @@ The application's configuration is stored in the `config.py` file. You can modif
 
 The application includes three routers: `auth`, `posts`, and `users`. You can find the route definitions and logic in the corresponding router files in the `routers` directory.
 
-### Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, please follow these guidelines:
 
@@ -63,17 +63,17 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 6. Push your changes to your fork: `git push origin feature/your-feature-name`.
 7. Create a pull request against the `main` branch of the original repository.
 
-### License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0.html) for details.
 
-### Acknowledgments
+## Acknowledgments
 
 * [FastAPI](https://fastapi.tiangolo.com/): A modern Python web framework for building APIs with automatic interactive documentation.
 * [SQLAlchemy](https://www.sqlalchemy.org/): A powerful and flexible SQL toolkit and Object-Relational Mapping (ORM) library for Python.
 * [uvicorn](https://www.uvicorn.org/): ASGI server for running Python web applications.
 
-### Contact
+## Contact
 
 For questions or feedback, please contact:
 
