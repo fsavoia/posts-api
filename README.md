@@ -8,7 +8,7 @@ These instructions will help you set up and run the Blog API on your local machi
 
 ### Prerequisites
 
-- Python 3.x installed on your machine
+- [Python 3.x](https://www.python.org/downloads/) installed on your machine
 - [pip](https://pip.pypa.io/en/stable/installation/) (Python package manager)
 
 ### Installation
