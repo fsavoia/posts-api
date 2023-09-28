@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+# TODO: we need to change to hide string connection
 SQLALCHEMY_ENDPOINT = "postgresql://admin:123qwe@db/fastapi"
 
 engine = create_engine(SQLALCHEMY_ENDPOINT)
