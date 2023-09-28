@@ -45,39 +45,39 @@ Visit http://localhost:8000/docs to access the interactive API documentation (Sw
 
 ### Configuration
 
-The application's configuration is stored in the config.py file. You can modify settings like the application title, description, and contact information there.
+The application's configuration is stored in the `config.py` file. You can modify settings like the application title, description, and contact information there.
 
 ### Routers
 
-The application includes three routers: auth, posts, and users. You can find the route definitions and logic in the corresponding router files in the routers directory.
+The application includes three routers: `auth`, `posts`, and `users`. You can find the route definitions and logic in the corresponding router files in the `routers` directory.
 
 ### Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, please follow these guidelines:
 
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix: git checkout -b feature/your-feature-name.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`.
 3. Make your changes and ensure the code is properly formatted.
 4. Write tests if applicable and ensure all tests pass.
 5. Commit your changes with a descriptive commit message.
-6. Push your changes to your fork: git push origin feature/your-feature-name.
-7. Create a pull request against the main branch of the original repository.
+6. Push your changes to your fork: `git push origin feature/your-feature-name`.
+7. Create a pull request against the `main` branch of the original repository.
 
 ### License
 
-This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0.html) for details.
 
 ### Acknowledgments
 
-FastAPI: A modern Python web framework for building APIs with automatic interactive documentation.
-SQLAlchemy: A powerful and flexible SQL toolkit and Object-Relational Mapping (ORM) library for Python.
-uvicorn: ASGI server for running Python web applications.
+* [FastAPI](https://fastapi.tiangolo.com/): A modern Python web framework for building APIs with automatic interactive documentation.
+* [SQLAlchemy](https://www.sqlalchemy.org/): A powerful and flexible SQL toolkit and Object-Relational Mapping (ORM) library for Python.
+* [uvicorn](https://www.uvicorn.org/): ASGI server for running Python web applications.
 
 ### Contact
 
 For questions or feedback, please contact:
 
-Name: Felipe Savoia
-Email: fmsavoia@gmail.com
+* Name: Felipe Savoia
+* Email: fmsavoia@gmail.com
 
 Thank you for using the Blog API!
