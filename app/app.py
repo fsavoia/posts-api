@@ -33,4 +33,4 @@ def root():
     """
     Root endpoint to check if the API is running.
     """
-    return {"message": "Hello World"}
+    return {"message": "Welcome to Blog API"}
